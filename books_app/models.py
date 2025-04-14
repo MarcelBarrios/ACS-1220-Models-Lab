@@ -86,3 +86,10 @@ book_genre_table = db.Table('book_genre',
                             db.Column('genre_id', db.Integer,
                                       db.ForeignKey('genre.id'))
                             )
+
+favorite_book_table = db.Table('favorite_book_table',
+                               db.Column('user_id', db.Integer,
+                                         db.ForeignKey('user.id')),
+                               db.Column('book_id', db.Integer,
+                                         db.ForeignKey('book.id'))
+                               )
